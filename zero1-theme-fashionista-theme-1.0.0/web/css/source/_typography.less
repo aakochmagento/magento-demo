@@ -1,0 +1,58 @@
+// Catamaran - for content
+.lib-font-face(
+  @family-name: 'Catamaran',
+  @font-path: '@{baseDir}fonts/catamaran/light/catamaran-light-webfont',
+  @font-weight: 300,
+  @font-style: normal
+);
+.lib-font-face(
+  @family-name: 'Catamaran',
+  @font-path: '@{baseDir}fonts/catamaran/regular/catamaran-regular-webfont',
+  @font-weight: 400,
+  @font-style: normal
+);
+.lib-font-face(
+  @family-name: 'Catamaran',
+  @font-path: '@{baseDir}fonts/catamaran/bold/catamaran-bold-webfont',
+  @font-weight: 700,
+  @font-style: normal
+);
+// Montserrat - for headings
+.lib-font-face(
+  @family-name: 'Montserrat',
+  @font-path: '@{baseDir}fonts/montserrat/ultralight/montserrat-ultralight-webfont',
+  @font-weight: 200,
+  @font-style: normal
+);
+.lib-font-face(
+  @family-name: 'Montserrat',
+  @font-path: '@{baseDir}fonts/montserrat/light/montserrat-light-webfont',
+  @font-weight: 300,
+  @font-style: normal
+);
+.lib-font-face(
+  @family-name: 'Montserrat',
+  @font-path: '@{baseDir}fonts/montserrat/regular/montserrat-regular-webfont',
+  @font-weight: 400,
+  @font-style: normal
+);
+.lib-font-face(
+  @family-name: 'Montserrat',
+  @font-path: '@{baseDir}fonts/montserrat/bold/montserrat-bold-webfont',
+  @font-weight: 700,
+  @font-style: normal
+);
+
+//  Fonts
+@font-family__sans-serif: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+//
+@montserrat: 'Montserrat', @font-family__base;
+@catamaran: 'Catamaran', @font-family__base;
+
+@h1__font-size: ceil((@font-size__base * 3)); // 30px
+@h1__font-family: @montserrat;
+@h1__font-weight: 200;
+
+@h2__font-size: ceil((@font-size__base * 2)); // 26px
+@h2__font-family: @montserrat;
+@h2__font-weight: 200;

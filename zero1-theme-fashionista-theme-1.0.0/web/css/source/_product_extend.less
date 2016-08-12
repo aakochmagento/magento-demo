@@ -1,0 +1,104 @@
+.product-info-main .page-title-wrapper h1 {
+  font-size: 2.8rem;
+  font-weight: @font-weight__bold;
+  text-transform: uppercase;
+}
+.product-info-main .product-info-price {
+  border-bottom: 0;
+  color: @color-black;
+}
+.product-info-main .product-info-price .price-box {
+  display: block;
+}
+.product-options-bottom .price-box,
+.product-info-price .price-box {
+  color: @color-black;
+}
+// Rating stars
+.product-info-main .product-reviews-summary {
+  float: none;
+  margin-bottom: 20px;
+}
+.rating-summary .rating-result {
+  margin-left: -5px;
+}
+.rating-summary .rating-result > span:before {
+  color: @color-black;
+}
+.product-info-main .rating-summary,
+.customer-review .rating-summary {
+  margin-right: 5px;
+}
+.product-reviews-summary .reviews-actions a:not(:last-child) {
+  margin-right: 10px;
+}
+// Media
+.fotorama__thumb-border {
+  border-color: @color-black;
+}
+// Swatches
+.swatch-attribute.size .swatch-option {
+  background: @color-white;
+  color: @color-black;
+}
+.swatch-option.color {
+  width: 30px;
+  height: 30px;
+}
+.swatch-option.selected {
+  outline: 1px solid @color-black;
+}
+.swatch-option.image:not(.disabled):hover,
+.swatch-option.color:not(.disabled):hover {
+  outline: 1px solid @color-gray80;
+}
+// Cart
+.paypal-review-discount .block > .title strong,
+.cart-discount .block > .title strong {
+  color: @color-black;
+}
+.cart.table-wrapper .actions-toolbar > .action-edit:before,
+.cart.table-wrapper .actions-toolbar > .action-delete:before {
+  font-size: 30px;
+}
+// Mobile only
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .product.attibute.sku {display:none;}
+}
+// Desktop only
+//@media (min-width: 768px), print {
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .product-reviews-summary {
+    margin-bottom: 0;
+  }
+  .product-options-bottom .price-box .price-container .price,
+  .product-info-price .price-box .price-container .price {
+    font-size: ceil((@font-size__base * 1.6));
+  }
+  .product-reviews-summary .reviews-actions {
+    font-style: italic;
+    margin-top: 0;
+  }
+  .product-info-main .product-info-stock-sku {
+    min-width: 100%;
+    text-align: left;
+    display: block;
+    padding: 0;
+  }
+  // tabs
+  @tabheight: 40px;
+
+  .product.data.items > .item.title > .switch {
+    color: @color-black;
+    font-family: @montserrat;
+    font-weight: @font-weight__bold;
+    text-transform: uppercase;
+
+    line-height: @tabheight;
+    height: @tabheight;
+  }
+  .product.data.items > .item.content {
+    margin-top: ceil((@tabheight + 11));
+
+  }
+}

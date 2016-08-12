@@ -1,0 +1,21 @@
+/* Buttons */
+@button-primary__background: @color-black;
+@button-primary__border: 1px solid @color-black;
+
+@button-primary__hover__background: lighten(@color-black, 10%);
+@button-primary__hover__border: 1px solid lighten(@color-black, 10%);
+
+@button__border-radius: 0px;
+// general
+.action.primary {
+  font-weight: @font-weight__regular;
+  text-transform: uppercase;
+}
+.action.primary.tocart {font-family: @montserrat;}
+.action.primary.tocart:hover {}
+
+// product view add to cart
+.product-info-main .box-tocart .action.tocart {
+  font-size: 2rem;
+  padding: 14px 25px;
+}

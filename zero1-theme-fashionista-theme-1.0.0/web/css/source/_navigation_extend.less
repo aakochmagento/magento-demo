@@ -1,0 +1,115 @@
+.nav-sections {
+  background: transparent;
+  border-bottom: 3px solid @color-black;
+  text-align: center;
+}
+// Mobile only
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  @mobilenavbg: @color-black;
+
+  .nav-open .nav-sections {
+    background: @mobilenavbg;
+    color: @color-white;
+    box-shadow: none;
+  }
+  .nav-sections-item-title {
+    background: lighten(@mobilenavbg,10%);
+    border-color: lighten(@mobilenavbg,20%);
+  }
+  .nav-sections-item-title a.nav-sections-item-switch {
+    color: darken(@color-white,10%);
+    font-weight: @font-weight__bold;
+    font-family: @montserrat;
+    text-transform: uppercase;
+  }
+  .nav-sections-item-title.active a.nav-sections-item-switch {
+    color: @color-white;
+  }
+  .navigation .parent .level-top:after {
+    font-size: 2.5rem;
+  }
+  .navigation {
+    background: transparent;
+    text-align: left;
+  }
+  .navigation a {
+    color: @color-white;
+    font-family: @montserrat;
+    text-transform: uppercase;
+  }
+  .navigation .level0,
+  .navigation li.level0:last-child {
+    border: 1px solid rgba(255,255,255,0.15);
+    border-width: 0 0 1px;
+  }
+  .navigation .level0.active > a:not(.ui-state-active),
+  .navigation .level0.has-active > a:not(.ui-state-active) {
+    border-left-color: @mobilenavbg;
+  }
+  .navigation .submenu:not(:first-child) ul > li a {
+    color: darken(@color-white,5%);
+  }
+  .nav-sections .switcher,
+  .nav-sections .header.links,
+  .nav-sections .header.links li > a,
+  .section-item-content li,
+  .section-item-content li a {
+    border-color: rgba(255,255,255,0.15)!important;
+    color: @color-white;
+    text-align: left;
+  }
+  .nav-sections .header.links a,
+  .nav-sections .header.links a:hover {
+    color: @color-white;
+  }
+
+}
+// Desktop only
+//@media (min-width: 768px), print {
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .navigation {
+    background: transparent;
+  }
+  .navigation .level0 > .level-top {
+    display: inline-block;
+
+    font-family: @montserrat;
+    color: @color-black;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    line-height: 1;
+
+    padding: 15px 20px;
+    text-transform: uppercase;
+  }
+  // Here
+  .navigation .level0.active > .level-top,
+  .navigation .level0.has-active > .level-top {
+    border-width: 0;
+    color: @color-gray56;
+  }
+  // Popups
+  .navigation .level0 .submenu {
+    border-color: @color-black;
+    box-shadow: none;
+  }
+  .navigation .level0 .submenu.level0 {
+    border-top: 0;
+  }
+  .navigation .level0 .submenu .submenu {
+    left: 90% !important;
+  }
+  .navigation .level0 .submenu li {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .navigation .level0 .submenu a {
+    color: @color-black;
+    font-weight: @font-weight__light;
+  }
+  .navigation .level0 .submenu .active > a {
+    border-left: 0;
+    font-weight: @font-weight__bold;
+  }
+}

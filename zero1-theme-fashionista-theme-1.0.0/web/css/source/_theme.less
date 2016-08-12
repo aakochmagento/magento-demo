@@ -1,0 +1,111 @@
+/* New variables */
+.block-centered {
+  margin: 0 auto;
+  display: block;
+  float: none;
+}
+.absolute-centered {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  float: none;
+}
+.css-content {
+  content: ' ';
+  display: block;
+}
+.up-arrow {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(85, 85, 85, 0);
+  border-bottom-color: @color-gray-darken3;
+  border-width: 5px;
+  margin-left: -5px;
+}
+.down-arrow {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(85, 85, 85, 0);
+  border-top-color: @color-gray-darken3;
+  border-width: 5px;
+  margin-left: -5px;
+}
+.right-arrow {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(85, 85, 85, 0);
+  border-left-color: @color-gray-darken3;
+  border-width: 5px;
+  margin-top: -5px;
+}
+.left-arrow {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(85, 85, 85, 0);
+  border-right-color: @color-gray-darken3;
+  border-width: 5px;
+  margin-top: -5px;
+}
+.reset-hidden {
+  border: 0;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+  position: relative;
+  width: auto;
+}
+.reset-margin {
+  margin: 0;
+  padding: 0;
+}
+/* Declare Colours */
+@primary__color: @color-black; // change from #555
+
+/* Sitewide links */
+@link__color: @color-gray-darken4;
+@link__hover__color: lighten(@link__color, 25%);
+@active__color: lighten(@link__color, 25%);
+
+//@sidebar__background-color: @color-white;
+
+.icon-sprite, .social-icons li {
+  background-image: url(../images/icon_sprite.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  text-indent: -9999px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 4 / 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .icon-sprite, .social-icons li {
+    background-image: url(../images/icon_sprite@2x.png);
+    background-size: 100px 1000px;
+  }
+}
